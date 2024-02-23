@@ -1,0 +1,16 @@
+#login{
+    width: 25rem;
+    height: 20rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+.inputBox{
+    width: 20rem;
+    height: 3rem;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    margin-top: 20px;
+}

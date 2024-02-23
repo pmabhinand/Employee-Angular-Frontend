@@ -1,0 +1,36 @@
+#sideBar a{
+    text-decoration: none;
+    color: white;
+    margin-top: 20px;
+    margin-left: 10px;
+} 
+#addUser{
+    border: 1px solid lightgray;
+    padding: 10px;
+    border-radius: 10px;
+    color:grey;
+    position: absolute;
+    right: 10px;
+    text-decoration: none;
+}
+
+#export{
+    position: absolute;
+    right: 10px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+table{
+    width: 70rem
+}  
+th{
+    text-align: center;
+    height: 3rem;
+    background-color: lightcyan;
+}
+td{
+    text-align: center;
+}

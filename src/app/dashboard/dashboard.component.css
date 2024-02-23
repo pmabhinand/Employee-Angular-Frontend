@@ -1,0 +1,15 @@
+#sideBar a{
+    text-decoration: none;
+    color: white;
+}
+
+#profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#profile img{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+}

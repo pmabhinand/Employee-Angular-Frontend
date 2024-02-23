@@ -1,0 +1,42 @@
+<div class="row">
+
+    <div id="sideBar" class="d-flex flex-column col-lg-2 ms-2" style="height: 100vh;background-color: blueviolet;">
+      <a routerLink="/dashboard">Dashboard</a>
+        <a routerLink="/employees">Employee List</a>            
+    </div>
+
+    <div class="col-lg-2"></div>
+
+    <div class="col-lg-6">
+        <h2 class="text-primary text-center mt-5">Add New User Details</h2>
+        <form (ngSubmit)="addEmployee()" id="form" class="d-flex flex-column p-4 mt-5 shadow">
+
+            <input class="rounded" type="text" placeholder="User Id" name="empid" [(ngModel)]="employee.id" required pattern="[0-9]*" #employeeid="ngModel">
+            <span *ngIf="employeeid.invalid && employeeid.touched" class="text-danger">Invalid Id</span>
+
+            <input class="rounded" type="text" placeholder="Username" name="empname" [(ngModel)]="employee.name" required pattern="^[a-zA-Z]{3,}$" #employeename="ngModel">
+            <span *ngIf="employeename.invalid && employeename.touched" class="text-danger">Invalid Username</span>
+
+            <input class="rounded" type="email" placeholder="Email" name="empemail" [(ngModel)]="employee.email" required email #employeeemail="ngModel">
+            <span *ngIf="employeeemail.invalid && employeeemail.touched" class="text-danger">Invalid email</span>
+
+            <select class="rounded" name="empstatus" [(ngModel)]="employee.status" required  #employeestatus="ngModel">
+              <option value="1">Active</option>
+              <option value="0">Inactive</option>
+            </select>
+            <span *ngIf="employeestatus.invalid && employeestatus.touched" class="text-danger">Invalid status</span>
+
+            <div class="d-flex">
+              <button (click)="cancelEmployee()" class="btn btn-warning mt-3 me-2" type="button">Cancel</button>
+              <button class="btn btn-success mt-3" type="submit">Add</button>
+            </div>
+        </form>
+        
+
+    </div>
+
+    <div class="col-lg-2"></div>
+  
+  
+  
+  </div>

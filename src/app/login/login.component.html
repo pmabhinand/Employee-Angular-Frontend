@@ -1,0 +1,14 @@
+<form (ngSubmit) = "login()" #loginform = "ngForm" id="login" class="card shadow">
+   <h1 class="text-center text-primary">Login</h1>
+
+   <input class="inputBox" type="email" placeholder="Enter email" email required [(ngModel)]="email" name="email" #useremail = "ngModel">
+
+   <span *ngIf="useremail.invalid && useremail.touched" class="text-danger">Invalid Email</span>
+
+   <input class="inputBox" type="password" placeholder="Enter password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{4,}$"
+   [(ngModel)]="password" name="password" #userpswd="ngModel">
+
+   <span *ngIf="userpswd.invalid && userpswd.touched" class="text-danger">Invalid Password</span>
+
+   <button [disabled] = "loginform.invalid" class="btn btn-primary mt-3" type="submit">Log In</button>
+</form>
